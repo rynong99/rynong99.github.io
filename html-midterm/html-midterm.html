@@ -1,65 +1,87 @@
-<html>
-<head>
-    
-    <html language="en">
-    
-    <title>Error-Filled Page</title>
-    
-<body>
-    <h1>Welcome to My Error-Filled Page
-    
-    This is a paragraph with mismatched tags and missing closing tags.</p>
-    
-    <ol>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-        <li>Item 6</li>
-        <li>Item 7</li>
-        <li>Item 8</li>
-        <li>Item 9</li>
-        <li>Item 10</li>
-    </ul>
+<!DOCTYPE html> <!--missing DOCTYPE-->
+<html lang="en"> <!--head and html elements switched, switched them back--> <!--language changed to lang-->  
+    <head>  
+        <title>Error-Filled Page</title>
+    </head>
+    <body>
+        <h1>Welcome to My Error-Filled Page </h1> <!--missing closing tag / added closing tag-->
+        
+        <p>This is a paragraph with mismatched tags and missing closing tags.</p> <!--missing <p> tag / added <p>-->
+        
+        <ol> <!--mismatched list tags / changed </ul> to </ol>-->
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+            <li>Item 10</li>
+        </ol>
 
-    <p>This is another paragraph without proper indentation.
-    
-    <img src="image.jpg">
+        <p>This is another paragraph without proper indentation.</p> <!--missing </p> tag / added </p>-->
+        
+        <img src="image.jpg" alt = "lol"> <!--Missing alt attribute / added one-->
 
-    <a href="https://www.example.com" target="_blank">Click me!</img>
+        <a href="https://www.example.com" target="_blank">Click me!</a> <!--img closing tag instead of a/ replaced with </a> tag-->
 
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>John</td>
-            <td>25<td>
-        </tr>
-        <tr>
-            <td>Jane</td>
-            <td>30</td>
-        </tr>
-    
-    <img source="error.jpeg" alt="Error Image">
+         <table> 
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>25</td> <!--missing closing tag / added closing tag-->
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>30</td>
+            </tr>
+        </table>
+        <!--table left open / Closed table-->
+        <img src="error.jpeg" alt="Error Image"> <!--source needs to be src-->
 
-    <center>This is centered text.</center>
+        <div style = "text-align:center">This is centered text.</div> <!--obselete element, updated element-->
 
-    <p bgcolor="lightgray">Text</p>
+        <p style = "background-color: lightgray;">Text</p> <!--bgcolor obselete / changed to css-->
 
-    <input type="button" value="Click me">
+        <input type="button" value="Click me">
 
-    <!-- This is an unclosed comment
+        <!-- This is an unclosed comment --> <!--/closed comment-->
 
-    <a href="#">Link without closing tag
+        <a href="#">Link without closing tag</a><!-- Missing closing tag / Added missing closing tag-->
 
-    <p><em>Underlined text</p></em>
+        <p><u>Underlined text</u></p> <!-- wrong tag for underlining, closing tags in the wrong order / switched tags and changed em to u-->
 
-    <dl>
-        <li>Descriptive Item Title</li>
-        <li>Descriptive Item Text</li>
-    </dl>
-</body>
+        <dl>
+            <dt>Descriptive Item Title</dt> <!--wrong tags for descriptive list / corrected tags-->
+            <dd>Descriptive Item Text</dd>
+        </dl>
+    </body>
 </html>
+<!--
+    1. <html> tag where <!DOCTYPE html> should be. Added <!DOCTYPE html> tag.
+    2. <head> element where <html> tag should be. Switched <html> and <head>.
+    3. <html> tag has "language" attribute. Changed "language" to "lang".
+    4. <h1> tag missing closing tag. Added closing tag.
+    5. <p> tag missing closing tag. Added closing tag.
+    6. <ol> has mismatched </ul> closing tag. Changed </ul> to </ol>.
+    7. <p> tag missing closing tag. Added closing tag.
+    8. <img> tag missing alt attribute. Added alt attribute.
+    9. </img> tag where </a> should be. Switched to </a>.
+    10. <td> where </td> should be. Switched tag to </td>.
+    11. Table left open. Added closing tag </table>
+    12. src attribute typed as "Source". Changed to src.
+    13. <center> element is obselete. Changed formatting to CSS style = "text-align:center".
+    14. bgcolor attribute can't be used on <p> tags. Changed to style = "background-color:lightgray".
+    15. Open comment. Closed the comment.
+    16. <a> tag missing a closing tag. Added </a> closing tag.
+    17. Using <em> tags (italics) instead of <u> for underlining. Changed <em> to <u>.
+    18. Closing tags out of order. Fixed order of closing tags.
+    19. Wrong tags for descriptive titles. Changed <li> to <dt>.
+    20. Wrong tags for descriptive list items. Changed <li> to <dd>.
+
+-->
