@@ -1,8 +1,10 @@
 <!DOCTYPE html> <!--missing DOCTYPE-->
-<html lang="en"> <!--head and html elements switched, switched them back--> <!--language changed to lang-->  
-    <head>  
+<html lang = 'en'> <!--head and html elements switched, switched them back--> <!--language changed to lang-->  
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--Added missing meta information-->
         <title>Error-Filled Page</title>
-    </head>
+    </head> <!--head tag not closed / closed tag-->
     <body>
         <h1>Welcome to My Error-Filled Page </h1> <!--missing closing tag / added closing tag-->
         
@@ -48,7 +50,7 @@
 
         <p style = "background-color: lightgray;">Text</p> <!--bgcolor obselete / changed to css-->
 
-        <input type="button" value="Click me">
+        <button>Click me</button> <!--Updated button to button tag-->
 
         <!-- This is an unclosed comment --> <!--/closed comment-->
 
@@ -60,28 +62,32 @@
             <dt>Descriptive Item Title</dt> <!--wrong tags for descriptive list / corrected tags-->
             <dd>Descriptive Item Text</dd>
         </dl>
+        <hr>
+        <h2>Errors found:</h2>
+        <ol>
+            <li>Line 1: html tag where !DOCTYPE html should be. Changed to !DOCTYPE html tag.</li>
+            <li>Line 2: head element where html tag should be. Switched html and head.</li>
+            <li>Line 2: html tag has "language" attribute. Changed "language" to "lang".</li>
+            <li>Line 4-5: Added missing meta tags</li>
+            <li>Line 7: head element not closed. Added closing tag.</li>
+            <li>Line 9: h1 tag missing closing tag. Added closing tag.</li>
+            <li>Line 11: p tag missing opening tag. Added opening tag.</li>
+            <li>Line 24: ol has mismatched /ul closing tag. Changed /ul to /ol.</li>
+            <li>Line 26: p tag missing closing tag. Added closing tag.</li>
+            <li>Line 28: img tag missing alt attribute. Added alt attribute.</li>
+            <li>Line 30: /img tag where /a should be. Switched to /a</li>
+            <li>Line 39: td where /td should be. Switched tag to /td.</li>
+            <li>Line 45: Table left open. Added closing tag /table.</li>
+            <li>Line 47: src attribute typed as "Source". Changed to src.</li>
+            <li>Line 49: center element is obselete. Changed formatting to CSS style = "text-align:center".</li>
+            <li>Line 51: bgcolor attribute can't be used on p tags. Changed to style = "background-color:lightgray".</li>
+            <li>Line 53: Updated input button to button tag.</li>
+            <li>Line 55: Open comment. Closed the comment.</li>
+            <li>Line 57: a tag missing a closing tag. Added /a closing tag.</li>
+            <li>Line 59: Using em tags (italics) instead of u for underlining. Changed em to u.</li>
+            <li>Line 59: Closing tags out of order. Fixed order of closing tags.</li>
+            <li>Line 62: Wrong tags for descriptive titles. Changed li to dt. Wrong tags for descriptive list items. Changed li to dd.</li>
+        </ol>
     </body>
 </html>
-<!--
-    1. <html> tag where <!DOCTYPE html> should be. Added <!DOCTYPE html> tag.
-    2. <head> element where <html> tag should be. Switched <html> and <head>.
-    3. <html> tag has "language" attribute. Changed "language" to "lang".
-    4. <h1> tag missing closing tag. Added closing tag.
-    5. <p> tag missing closing tag. Added closing tag.
-    6. <ol> has mismatched </ul> closing tag. Changed </ul> to </ol>.
-    7. <p> tag missing closing tag. Added closing tag.
-    8. <img> tag missing alt attribute. Added alt attribute.
-    9. </img> tag where </a> should be. Switched to </a>.
-    10. <td> where </td> should be. Switched tag to </td>.
-    11. Table left open. Added closing tag </table>
-    12. src attribute typed as "Source". Changed to src.
-    13. <center> element is obselete. Changed formatting to CSS style = "text-align:center".
-    14. bgcolor attribute can't be used on <p> tags. Changed to style = "background-color:lightgray".
-    15. Open comment. Closed the comment.
-    16. <a> tag missing a closing tag. Added </a> closing tag.
-    17. Using <em> tags (italics) instead of <u> for underlining. Changed <em> to <u>.
-    18. Closing tags out of order. Fixed order of closing tags.
-    19. Wrong tags for descriptive titles. Changed <li> to <dt>.
-    20. Wrong tags for descriptive list items. Changed <li> to <dd>.
 
--->
