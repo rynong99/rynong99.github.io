@@ -74,3 +74,6 @@ p,h2{
 .card footer p,.card2 footer p{
     font-size: 1.2em;
 }
+.card2 article p{
+  font-family: 'Courier New', Courier, monospace;
+}
