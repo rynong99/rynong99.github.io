@@ -1,0 +1,11 @@
+.box{
+    background-color: rgba(118, 118, 185,100);
+    border: 2px solid red;
+    margin: 12em;
+}
+#anotherbox{
+    background-color: rgba(5, 121, 5,0.5);
+    font-style:italic;
+    border: 10px dotted yellow;
+    margin-top: 10em;
+}
