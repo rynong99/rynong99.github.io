@@ -21,14 +21,14 @@ p{
 }
 .compass{
     position:relative;
-    left:16.5%;
+    left:15em;
     text-align: center;
 }
 .health{
     position:relative;
     width: 15em;
     top: 22em;
-    left: 50%;
+    left: 40em;
     text-align: right;
 }
 .health p{
@@ -44,7 +44,7 @@ p{
     width: 5.5em;
     position: relative;
     top: 11em;
-    left: 50%;
+    left: 20em;
     padding-top: 0.1em;
     padding-right: 1em;
     padding-left: 1em;
