@@ -75,6 +75,6 @@ body {
       align-items: center;
     }
     article{
-      width: 100%;
+      width: auto;
     }
   }
