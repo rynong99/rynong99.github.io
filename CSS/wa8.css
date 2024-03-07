@@ -1,0 +1,70 @@
+body{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: white;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+}
+
+img{
+    width:30vw;
+    height: 30vh;
+    padding-top: 5%;
+    animation-name: animatey;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+#red-ball{
+    background-color: crimson;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    left:5vw;
+    margin-bottom: 20px;
+    transition: 
+    width 2s,
+    height 2s;
+}
+
+#red-ball:hover{
+    background-color: greenyellow;
+    width: 40px;
+    height:40px;
+}
+
+@keyframes animatey{
+    from{
+        margin-top: 128px;
+        rotate: 0deg;
+    }
+    15%{
+        rotate: 30deg;
+    }
+    50%{
+        margin-top: 0px;
+        rotate: 0deg;
+    }
+    65%{
+        rotate: -30deg;
+    }
+    to{
+        margin-top: 128px;
+        rotate: 0deg;
+    }
+}
