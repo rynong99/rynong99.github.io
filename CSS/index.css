@@ -75,7 +75,6 @@ dt{
     }
     article{
         flex-direction: column;
-        left: 0px;
     }
     .show{
         padding: 2%;
