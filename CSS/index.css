@@ -64,7 +64,7 @@ dt{
 }
 @media screen and (max-width: 500px) {
     header,footer{
-        width: auto;
+        width: 100%;
     }
     article{
         flex-direction: column;
@@ -72,6 +72,6 @@ dt{
     }
     .show{
         padding: 2%;
-        width: auto;
+        width: 100%;
     }
 }
