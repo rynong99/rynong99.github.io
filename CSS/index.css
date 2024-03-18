@@ -63,6 +63,9 @@ dt{
     font-weight: bold;
 }
 @media screen and (max-width: 500px) {
+    header,footer{
+        width: auto;
+    }
     article{
         flex-direction: column;
         left: 0px;
