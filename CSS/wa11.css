@@ -50,7 +50,22 @@ html {
     font-size: 25px;
     color: black;
   }
-  
+
+  .quote-text dl{
+    position: relative;
+    right: 25%;
+    width: 150%;
+  }
+  .quote-text dl *{
+    background-color: #66666605;
+    border: 0.1px solid #d3d3d375;
+    padding: 5%;
+  }
+  .quote-text dl dt *{
+    border-bottom: 0.1px solid #d3d3d375;
+    font-weight: 100;
+    font-size: 20px;
+  }
   .controls {
     width: 100%;
     padding: 20px 50px;

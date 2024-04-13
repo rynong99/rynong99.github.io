@@ -24,30 +24,37 @@ function displayQuote(json){
     pic.src = char.imageUrl
     pic.alt = char.name
     name.textContent = charName
-    const newList = document.createElement('ul')
-    desc.appendChild(newList)
+    const filmList = document.getElementById('Films')
     for (let i = 0 ; i < char.films.length ; i++){
       var listItem = document.createElement('li')
-      listItem.textContent = char.films[i] + ' (Film)'
-      newList.appendChild(listItem)
+      listItem.textContent = char.films[i]
+      filmList.appendChild(listItem)
     }
+    const sfList = document.getElementById('sFilms')
     for (let i = 0 ; i < char.shortFilms.length ; i++){
       var listItem = document.createElement('li')
-      listItem.textContent = char.shortFilms[i]+ ' (Short Film)'
-      newList.appendChild(listItem)
+      listItem.textContent = char.shortFilms[i]
+      sfList.appendChild(listItem)
     }
+    const showsList = document.getElementById('tvShows')
     for (let i = 0 ; i < char.tvShows.length ; i++){
       var listItem = document.createElement('li')
-      listItem.textContent = char.tvShows[i] + ' (TV Show)'
-      newList.appendChild(listItem)
+      listItem.textContent = char.tvShows[i]
+      showsList.appendChild(listItem)
     }
+    const vgList = document.getElementById('vGames')
     for (let i = 0 ; i < char.videoGames.length ; i++){
       var listItem = document.createElement('li')
-      listItem.textContent = char.videoGames[i] + ' (Video Game)'
-      newList.appendChild(listItem)
+      listItem.textContent = char.videoGames[i]
+      vgList.appendChild(listItem)
     }
     const btn = document.getElementById('js-new-quote');
-    btn.addEventListener('click',()=>{desc.removeChild(newList)})
+    btn.addEventListener('click',()=>{
+      filmList.innerHTML = "Films";
+      sfList.innerHTML = "Short Films";
+      showsList.innerHTML = "TV Shows";
+      vgList.innerHTML = "Video Games";
+    })
 }
 const btn = document.getElementById('js-new-quote');
 btn.addEventListener('click',getQuote)
