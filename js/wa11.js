@@ -25,10 +25,15 @@ function displayQuote(json){
     pic.alt = char.name
     name.textContent = charName
     const filmList = document.getElementById('Films')
+    if (char.films.length == 0){
+      filmList.innerHTML = '';
+    }
+    else{
     for (let i = 0 ; i < char.films.length ; i++){
       var listItem = document.createElement('li')
       listItem.textContent = char.films[i]
       filmList.appendChild(listItem)
+    }
     }
     const sfList = document.getElementById('sFilms')
     for (let i = 0 ; i < char.shortFilms.length ; i++){
