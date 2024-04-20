@@ -1,3 +1,4 @@
+//Problem 1
 const personnel = {
     'workers':[
         {'firstName' : 'Sam',
@@ -22,7 +23,7 @@ const personnel = {
 }
 console.log('Question 1:')
 console.log(personnel)
-
+//Problem 2
 const company = {
     companyName : 'Tech Stars',
     website : 'www.techstars.site',
@@ -30,7 +31,7 @@ const company = {
 }
 console.log('Question 2:') 
 console.log(company)
-
+//Problem 3
 company.employees.workers.push({'firstName' : 'Anna',
 'department' : 'Tech',
 'role' : 'Executive',
@@ -39,13 +40,14 @@ company.employees.workers.push({'firstName' : 'Anna',
 })
 console.log('Question 3:')
 console.log(company.employees.workers)
-
+//Problem 4
 var totalSalary = 0
 for (let i = 0; i < company.employees.workers.length;i++){
     totalSalary += company.employees.workers[i].salary;
 }
 console.log('Question 4:')
 console.log(totalSalary)
+//Problem 5
 function raise(){
     for (let i = 0; i < company.employees.workers.length;i++){
         if (company.employees.workers[i].raiseEligible == true){
@@ -57,7 +59,7 @@ function raise(){
 raise()
 console.log('Question 5:')
 console.log(company.employees.workers)
-
+//Problem 6
 const homeWorkers= ['Anna','Sam']
 for (let i = 0; i < company.employees.workers.length;i++){
     company.employees.workers[i].wfh = false
