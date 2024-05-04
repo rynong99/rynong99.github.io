@@ -48,6 +48,20 @@ class Ball {
     this.x += this.velX;
     this.y += this.velY;
     }
+    collisionDetect() {
+        for (const ball of balls) {
+          if (this !== ball) {
+            const dx = this.x - ball.x;
+            const dy = this.y - ball.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+      
+            if (distance < this.size + ball.size) {
+              this.velX = -(this.velX)/1.2;
+              this.velY = -(this.velY)/1.2;
+            }
+          }
+        }
+      }
   }
 btn.addEventListener('click',()=>{
     const state = btn.getAttribute('class')
@@ -65,17 +79,15 @@ btn.addEventListener('click',()=>{
 })
 const balls = [];
 click.addEventListener('click',(event)=>{
-    for (let i = 1; i <= 5;i++){
         const ball = new Ball(
-            40,
-            (height/1.25) - 20,
-            (event.layerX)/(5*i),
-            -((height/2) - event.layerY)/10,
-            'white',
-            10,
+        40,
+        (height/1.25) - 20,
+        (event.layerX)/25,
+        -((height/2) - event.layerY)/10,
+        'white',
+        10,
         );
-        balls.push(ball);  
-        }
+        balls.push(ball);
     }
 )
 marker =  new Ball(720,height/1.25,0,0,'white',10)
@@ -93,27 +105,29 @@ function loop() {
         ctx.strokeStyle = 'white';
         ctx.beginPath();
         ctx.arc(40, height/1.25, 10, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
+        ctx.moveTo(40, height/1.25);
+        ctx.lineTo(event.layerX*1.25,event.layerY*1.25)
+        ctx.stroke();
     }
     )
     for (var ball of balls) {
         ball.draw();
         ball.update();
+        ball.collisionDetect();
         if (ball.stopped == true){           
             ball.y = height/1.25;
             ball.velX = 0
             ball.velY = 0
         if (ball.x >= 720){
-            ball.x = 620
+            ball.x = 720
         }
         if (ball.x <= 40){
             ball.x = 40
         }
         xcoord = Math.round(ball.x)
-        console.log(xcoord-40)
+        console.log(xcoord)
         console.log(720)
-        volume = Math.round(((xcoord-40)/720)*100)
+        volume = Math.round(((xcoord)/720)*100)
         if (volume/100 > 1){
             volume = 100
         }

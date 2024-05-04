@@ -16,6 +16,8 @@ html, body {
     background-color: black;
   }
 .volumeDisplay{
+    padding: 0%;
+    margin: 0%;
     position: fixed;
     top: 15%;
     max-height: fit-content;
@@ -23,6 +25,8 @@ html, body {
     color: white;
   }
 #volume{
+    position: relative;
+    padding-top: 0%;
     font-size: xx-large;
 }
 canvas{
@@ -34,11 +38,10 @@ canvas{
     border: 5px solid white;
 }
 button{
-    border: 0;
-    background: rgba(150,150,150,0.6);
-    text-shadow: 1px 1px 1px white;
+    color: white;
+    background-color: black;
     border: 1px solid #999;
     position: absolute;
     cursor: pointer;
-    top: 47%;
+    top: 40%;
 }
