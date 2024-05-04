@@ -5,6 +5,7 @@ const click = document.getElementById("interact");
 const ctx = canvas.getContext("2d");
 const width = canvas.width;
 const height = canvas.height;
+const btn = document.querySelector('button');
 const volumeDisplay = document.getElementById('volume');
 const sound = document.getElementById('sound');
 volumeDisplay.innerHTML = 100
@@ -48,6 +49,20 @@ class Ball {
     this.y += this.velY;
     }
   }
+btn.addEventListener('click',()=>{
+    const state = btn.getAttribute('class')
+    if (state == 'pause'){
+        btn.setAttribute("class", 'play');
+        btn.textContent = 'Play';
+        sound.play();
+         
+    }
+    else{
+        btn.setAttribute("class", 'pause');
+        btn.textContent = 'Pause';
+        sound.pause() 
+    }
+})
 const balls = [];
 click.addEventListener('click',(event)=>{
     for (let i = 1; i <= 5;i++){
@@ -66,14 +81,6 @@ click.addEventListener('click',(event)=>{
 marker =  new Ball(720,height/1.25,0,0,'white',10)
 pivot =  new Ball(40,height/1.25,0,0,'red',10)
 function loop() {
-click.addEventListener('mousemove',(event)=>{
-    ctx.strokeStyle = 'white';
-    ctx.beginPath();
-    ctx.arc(40, height/1.25, 10, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.closePath();
-}
-)
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, width, height);
     ctx.moveTo(40,(height/1.25));
@@ -82,6 +89,14 @@ click.addEventListener('mousemove',(event)=>{
     ctx.stroke();
     marker.draw();
     pivot.draw();
+    click.addEventListener('mousemove',(event)=>{
+        ctx.strokeStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(40, height/1.25, 10, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+    }
+    )
     for (var ball of balls) {
         ball.draw();
         ball.update();
