@@ -16,7 +16,7 @@ html, body {
     background-color: black;
   }
 .volumeDisplay{
-    position: absolute;
+    position: fixed;
     top: 15%;
     max-height: fit-content;
     text-align: center;

@@ -42,6 +42,7 @@ class Ball {
     }
     if ((this.y) >= height/1.25) {
         this.velY = -(this.velY)/1.2;
+        this.velX = (this.velX)/1.2;
     }
     this.x += this.velX;
     this.y += this.velY;
