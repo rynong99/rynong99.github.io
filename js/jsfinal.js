@@ -72,10 +72,6 @@ click.addEventListener('mousemove',(event)=>{
     ctx.arc(40, height/1.25, 10, 0, 2 * Math.PI);
     ctx.fill();
     ctx.closePath();
-    ctx.moveTo(40,(height/1.25));
-    ctx.lineTo(event.layerX, event.layerY);
-    ctx.lineWidth = 2
-    ctx.stroke();
 }
 )
     ctx.fillStyle = "black";
